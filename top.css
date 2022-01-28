@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+.mainVisual {
+  background: gainsboro;
+  color: black;
+}
+.mainVisual__inner {
+  display: flex;
+  flex-direction: column-reverse;
+  padding: 50px;
+}
+.mainVisual__image {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px),print {
+  .mainVisual {
+    padding: 40px 0;
+  }
+  .mainVisual__inner {
+    max-width: 1080px;
+    margin: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mainVisual__image {
+    flex-shrink: 0;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+}
+
+ /* foodList
+----------------------------------------*/
+.foodList {
+    display: flex;
+    flex-direction: column;
+    margin-top: -20px;
+  }
+  .foodList__item {
+    max-width: 400px;
+    margin: 20px auto 0;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0,0,0,.1);
+  }
+  .foodList__thumb img{
+    max-width: none;
+    width: 100%;
+  }
+  .foodList__data {
+    margin: 20px;
+  }
+  .foodList__data dt {
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .foodList__data dd {
+    margin-top: 10px;
+    line-height: 1.875;
+  }
+  .foodList__btn {
+    margin: 20px;
+  }
+  @media screen and (min-width: 768px),print {
+    .serviceList {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .foodList__item {
+      display: flex;
+      flex-direction: column; /*ボタン位置を下端に揃えるために縦軸に変更*/
+      width: calc((100% - 40px) / 3);
+    }
+    .foodList__btn {
+      margin-top: auto; /*カード內でボタン位置を下端に揃える*/
+    }
+  }
+  
